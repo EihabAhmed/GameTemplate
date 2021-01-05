@@ -8,13 +8,15 @@ public class World {
     Turtle turtle;
 
     Vector2 position;
+    int angle;
 
     World(GameTemplate myGame) {
         this.myGame = myGame;
 
-        position = GameGenerator.generateGame();
+        position = GameGenerator.generatePosition();
+        angle = GameGenerator.generateAngle();
 
-        turtle = new Turtle(myGame, position);
+        turtle = new Turtle(myGame, position, angle);
     }
 
     public void update() {

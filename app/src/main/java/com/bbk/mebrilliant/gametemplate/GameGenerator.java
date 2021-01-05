@@ -10,7 +10,7 @@ class GameGenerator {
 
     static Vector2 position = new Vector2();
 
-    static Vector2 generateGame()
+    static Vector2 generatePosition()
     {
         position.x = generateXPosition();
         position.y = generateYPosition();
@@ -30,5 +30,9 @@ class GameGenerator {
         float yPosition = new Random().nextFloat() * 800;
 
         return yPosition;
+    }
+
+    static int generateAngle() {
+        return new Random().nextInt(360);
     }
 }

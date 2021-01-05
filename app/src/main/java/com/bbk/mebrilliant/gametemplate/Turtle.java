@@ -10,17 +10,31 @@ public class Turtle {
 
     int x;
     int y;
+    int angle;
 
-    Turtle(GameTemplate myGame, Vector2 position) {
+    Turtle(GameTemplate myGame, Vector2 position, int angle) {
         this.myGame = myGame;
         x = (int)position.x;
         y = (int)position.y;
+        this.angle = angle;
     }
 
     void draw() {
         Graphics g = myGame.getGraphics();
-        g.drawLine(x, y, x - 20, y + 20, Color.YELLOW);
-        g.drawLine(x, y, x + 20, y + 20, Color.YELLOW);
-        g.drawLine(x - 20, y + 20, x + 20, y + 20, Color.YELLOW);
+        g.drawLine(
+                x,
+                y,
+                x + (int)(30 * Math.cos((45 - angle) * Math.PI / 180)),
+                y + (int)(30 * Math.sin((45 - angle) * Math.PI / 180)), Color.YELLOW);
+        g.drawLine(
+                x,
+                y,
+                x + (int)(30 * Math.cos((180 - 45 - angle) * Math.PI / 180)),
+                y + (int)(30 * Math.sin((180 - 45 - angle) * Math.PI / 180)), Color.YELLOW);
+        g.drawLine(
+                x + (int)(30 * Math.cos((45 - angle) * Math.PI / 180)),
+                y + (int)(30 * Math.sin((45 - angle) * Math.PI / 180)),
+                x + (int)(30 * Math.cos((180 - 45 - angle) * Math.PI / 180)),
+                y + (int)(30 * Math.sin((180 - 45 - angle) * Math.PI / 180)), Color.YELLOW);
     }
 }
