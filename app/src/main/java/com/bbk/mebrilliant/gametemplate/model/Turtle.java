@@ -1,9 +1,10 @@
-package com.bbk.mebrilliant.gametemplate;
+package com.bbk.mebrilliant.gametemplate.model;
 
 import android.graphics.Color;
 
 import com.badlogic.androidgames.framework.Graphics;
 import com.badlogic.androidgames.framework.math.Vector2;
+import com.bbk.mebrilliant.gametemplate.app.GameTemplate;
 
 public class Turtle {
     private final GameTemplate myGame;
@@ -19,7 +20,7 @@ public class Turtle {
         this.angle = angle;
     }
 
-    void draw() {
+    public void draw() {
         Graphics g = myGame.getGraphics();
         g.drawLine(
                 x,

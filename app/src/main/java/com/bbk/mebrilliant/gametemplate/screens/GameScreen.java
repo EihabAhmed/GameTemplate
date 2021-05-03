@@ -1,4 +1,4 @@
-package com.bbk.mebrilliant.gametemplate;
+package com.bbk.mebrilliant.gametemplate.screens;
 
 import android.graphics.Color;
 
@@ -6,10 +6,12 @@ import com.badlogic.androidgames.framework.Game;
 import com.badlogic.androidgames.framework.Graphics;
 import com.badlogic.androidgames.framework.Input.KeyEvent;
 import com.badlogic.androidgames.framework.Input.TouchEvent;
-import com.badlogic.androidgames.framework.Pixmap;
 import com.badlogic.androidgames.framework.Screen;
+import com.bbk.mebrilliant.gametemplate.app.GameTemplate;
+import com.bbk.mebrilliant.gametemplate.model.World;
+import com.bbk.mebrilliant.gametemplate.tools.Assets;
+import com.bbk.mebrilliant.gametemplate.tools.Settings;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class GameScreen extends Screen {

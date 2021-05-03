@@ -1,16 +1,18 @@
-package com.bbk.mebrilliant.gametemplate;
+package com.bbk.mebrilliant.gametemplate.model;
 
 import com.badlogic.androidgames.framework.math.Vector2;
+import com.bbk.mebrilliant.gametemplate.app.GameTemplate;
+import com.bbk.mebrilliant.gametemplate.tools.GameGenerator;
 
 public class World {
     private GameTemplate myGame;
 
-    Turtle turtle;
+    public Turtle turtle;
 
     Vector2 position;
     int angle;
 
-    World(GameTemplate myGame) {
+    public World(GameTemplate myGame) {
         this.myGame = myGame;
 
         position = GameGenerator.generatePosition();

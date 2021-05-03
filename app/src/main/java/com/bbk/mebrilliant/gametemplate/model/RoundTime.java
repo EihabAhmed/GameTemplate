@@ -1,4 +1,4 @@
-package com.bbk.mebrilliant.gametemplate;
+package com.bbk.mebrilliant.gametemplate.model;
 
 public class RoundTime {
 	private int seconds;

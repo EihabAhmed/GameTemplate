@@ -1,4 +1,4 @@
-package com.bbk.mebrilliant.gametemplate;
+package com.bbk.mebrilliant.gametemplate.app;
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -7,6 +7,9 @@ import android.os.Message;
 
 import com.badlogic.androidgames.framework.Screen;
 import com.badlogic.androidgames.framework.impl.AndroidGame;
+import com.bbk.mebrilliant.gametemplate.screens.MainMenuScreen;
+import com.bbk.mebrilliant.gametemplate.tools.Assets;
+import com.bbk.mebrilliant.gametemplate.tools.Settings;
 
 public class GameTemplate extends AndroidGame {
     boolean firstTimeCreate = true;

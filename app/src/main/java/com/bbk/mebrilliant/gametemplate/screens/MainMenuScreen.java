@@ -1,4 +1,4 @@
-package com.bbk.mebrilliant.gametemplate;
+package com.bbk.mebrilliant.gametemplate.screens;
 
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
@@ -11,6 +11,9 @@ import com.badlogic.androidgames.framework.Input.KeyEvent;
 import com.badlogic.androidgames.framework.Input.TouchEvent;
 import com.badlogic.androidgames.framework.Pixmap;
 import com.badlogic.androidgames.framework.Screen;
+import com.bbk.mebrilliant.gametemplate.app.GameTemplate;
+import com.bbk.mebrilliant.gametemplate.tools.Assets;
+import com.bbk.mebrilliant.gametemplate.tools.Settings;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,7 +27,7 @@ public class MainMenuScreen extends Screen {
 
     private int touchX = 0;
 
-    MainMenuScreen(Game game) {
+    public MainMenuScreen(Game game) {
         super(game);
         myGame = (GameTemplate) game;
 
