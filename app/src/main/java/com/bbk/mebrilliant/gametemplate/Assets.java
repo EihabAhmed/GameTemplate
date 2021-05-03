@@ -15,6 +15,7 @@ public class Assets {
     static Pixmap noSoundImage;
     static Pixmap rateUsButtonPressedImage;
     static Pixmap gameBackgroundImage;
+    static Pixmap numbers;
 
     static Sound clickSound;
 

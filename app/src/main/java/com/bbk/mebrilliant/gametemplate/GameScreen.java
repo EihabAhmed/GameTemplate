@@ -28,6 +28,8 @@ public class GameScreen extends Screen {
 
     World world;
 
+    String score = "0";
+
     GameScreen(Game game) {
         super(game);
 
@@ -36,6 +38,8 @@ public class GameScreen extends Screen {
         world = new World(myGame);
 
         state = GameState.Running;
+
+        score = "123";
     }
 
     @Override
@@ -130,6 +134,8 @@ public class GameScreen extends Screen {
     }
 
     private void drawRunningUI(Graphics g) {
+        drawText(g, score, g.getWidth() / 2 - score.length() * 20 / 2, g.getHeight() - 69);
+
         world.turtle.draw();
     }
 
@@ -137,6 +143,19 @@ public class GameScreen extends Screen {
     }
 
     private void drawGameOverUI(Graphics g) {
+    }
+
+    public void drawText(Graphics g, String line, int x, int y) {
+        int len = line.length();
+        for (int i = 0; i < len; i++) {
+            char character = line.charAt(i);
+
+            int srcX = (character - '0') * 20;
+            int srcWidth = 20;
+
+            g.drawPixmap(Assets.numbers, x, y, srcX, 0, srcWidth, 32);
+            x += srcWidth;
+        }
     }
 
     @Override
@@ -150,10 +169,12 @@ public class GameScreen extends Screen {
         Settings.loadPrefs(myGame);
 
         Assets.gameBackgroundImage = g.newPixmap("normalbackground-452x800.png", Graphics.PixmapFormat.RGB565);
+        Assets.numbers = g.newPixmap("numbers.png", Graphics.PixmapFormat.ARGB4444);
     }
 
     @Override
     public void dispose() {
         Assets.gameBackgroundImage.dispose();
+        Assets.numbers.dispose();
     }
 }
