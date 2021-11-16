@@ -1,4 +1,4 @@
-package com.bbk.mebrilliant.gametemplate.screens;
+package com.bbk.mebrilliant.gametemplate.ui;
 
 import android.content.ActivityNotFoundException;
 import android.content.Intent;

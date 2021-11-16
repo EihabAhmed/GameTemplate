@@ -7,7 +7,7 @@ import android.os.Message;
 
 import com.badlogic.androidgames.framework.Screen;
 import com.badlogic.androidgames.framework.impl.AndroidGame;
-import com.bbk.mebrilliant.gametemplate.screens.MainMenuScreen;
+import com.bbk.mebrilliant.gametemplate.ui.MainMenuScreen;
 import com.bbk.mebrilliant.gametemplate.tools.Assets;
 import com.bbk.mebrilliant.gametemplate.tools.Settings;
 

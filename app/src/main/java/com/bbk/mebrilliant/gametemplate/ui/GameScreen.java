@@ -1,4 +1,4 @@
-package com.bbk.mebrilliant.gametemplate.screens;
+package com.bbk.mebrilliant.gametemplate.ui;
 
 import android.graphics.Color;
 
