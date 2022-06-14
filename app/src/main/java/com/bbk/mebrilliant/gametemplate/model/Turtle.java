@@ -25,17 +25,17 @@ public class Turtle {
         g.drawLine(
                 x,
                 y,
-                x + (int)(30 * Math.cos((45 - angle) * Math.PI / 180)),
-                y + (int)(30 * Math.sin((45 - angle) * Math.PI / 180)), Color.YELLOW);
+                x + (int)(30 * Math.cos((25 - angle) * Math.PI / 180)),
+                y + (int)(30 * Math.sin((25 - angle) * Math.PI / 180)), Color.YELLOW);
         g.drawLine(
                 x,
                 y,
-                x + (int)(30 * Math.cos((180 - 45 - angle) * Math.PI / 180)),
-                y + (int)(30 * Math.sin((180 - 45 - angle) * Math.PI / 180)), Color.YELLOW);
+                x + (int)(30 * Math.cos((180 - 25 - angle) * Math.PI / 180)),
+                y + (int)(30 * Math.sin((180 - 25 - angle) * Math.PI / 180)), Color.YELLOW);
         g.drawLine(
-                x + (int)(30 * Math.cos((45 - angle) * Math.PI / 180)),
-                y + (int)(30 * Math.sin((45 - angle) * Math.PI / 180)),
-                x + (int)(30 * Math.cos((180 - 45 - angle) * Math.PI / 180)),
-                y + (int)(30 * Math.sin((180 - 45 - angle) * Math.PI / 180)), Color.YELLOW);
+                x + (int)(30 * Math.cos((25 - angle) * Math.PI / 180)),
+                y + (int)(30 * Math.sin((25 - angle) * Math.PI / 180)),
+                x + (int)(30 * Math.cos((180 - 25 - angle) * Math.PI / 180)),
+                y + (int)(30 * Math.sin((180 - 25 - angle) * Math.PI / 180)), Color.YELLOW);
     }
 }
