@@ -8,6 +8,7 @@ import com.badlogic.androidgames.framework.Input.KeyEvent;
 import com.badlogic.androidgames.framework.Input.TouchEvent;
 import com.badlogic.androidgames.framework.Screen;
 import com.bbk.mebrilliant.gametemplate.app.GameTemplate;
+import com.bbk.mebrilliant.gametemplate.model.StarryBackground;
 import com.bbk.mebrilliant.gametemplate.model.World;
 import com.bbk.mebrilliant.gametemplate.tools.Assets;
 import com.bbk.mebrilliant.gametemplate.tools.Settings;
@@ -32,16 +33,22 @@ public class GameScreen extends Screen {
 
     String score = "0";
 
+    public StarryBackground starryBackground;
+
     GameScreen(Game game) {
         super(game);
 
         myGame = (GameTemplate) game;
+
+        resume();
 
         world = new World(myGame);
 
         state = GameState.Running;
 
         score = "123";
+
+        starryBackground = new StarryBackground(game, 100, 50);
     }
 
     @Override
@@ -84,6 +91,7 @@ public class GameScreen extends Screen {
         }
 
         world.update();
+        starryBackground.update();
     }
 
     private void updatePaused(List<TouchEvent> touchEvents) {
@@ -136,9 +144,12 @@ public class GameScreen extends Screen {
     }
 
     private void drawRunningUI(Graphics g) {
+        starryBackground.draw();
+
         drawText(g, score, g.getWidth() / 2 - score.length() * 20 / 2, g.getHeight() - 69);
 
         world.turtle.draw();
+        world.car.draw();
     }
 
     private void drawPausedUI(Graphics g) {
@@ -172,11 +183,13 @@ public class GameScreen extends Screen {
 
         Assets.gameBackgroundImage = g.newPixmap("normalbackground-452x800.png", Graphics.PixmapFormat.RGB565);
         Assets.numbers = g.newPixmap("numbers.png", Graphics.PixmapFormat.ARGB4444);
+        Assets.car = g.newPixmap("car-144x108.png", Graphics.PixmapFormat.ARGB4444);
     }
 
     @Override
     public void dispose() {
         Assets.gameBackgroundImage.dispose();
         Assets.numbers.dispose();
+        Assets.car.dispose();
     }
 }

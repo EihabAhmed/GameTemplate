@@ -16,6 +16,7 @@ public class Assets {
     public static Pixmap rateUsButtonPressedImage;
     public static Pixmap gameBackgroundImage;
     public static Pixmap numbers;
+    public static Pixmap car;
 
     public static Sound clickSound;
 
